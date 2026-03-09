@@ -11,17 +11,25 @@ Framework features:
 • BDD (Gherkin scenarios)  
 • Page Object Model  
 • Test data management  
-• HTML reporting  
+• HTML reporting
 
 Project structure:
 
 features → BDD scenarios  
 pages → page objects  
 steps → step definitions  
-utils → test data  
+utils → test data
 
-Run tests
+Before Run tests
 
-npm install  
-npx playwright install  
-npm test
+npm install playwright
+npm install playwright-bdd
+npm install @playwright/test --save-dev
+npm install typescript ts-node --save-dev
+npm install @types/node --save-dev
+--
+to run test
+npx playwright install
+npx bddgen
+npx playwright test
+npx playwright show-report

@@ -1,4 +1,4 @@
-import { Page } from "@playwright/test";
+import { Page, expect } from "@playwright/test";
 
 export class LoginPage {
   constructor(private page: Page) {}
@@ -18,5 +18,6 @@ export class LoginPage {
   }
   async home() {
     await this.page.goto("https://automationexercise.com/");
+    await expect(this.page.locator(".carousel-inner").first()).toBeVisible();
   }
 }
